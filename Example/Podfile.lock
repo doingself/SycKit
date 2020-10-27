@@ -1,0 +1,16 @@
+PODS:
+  - SycKit (0.0.1)
+
+DEPENDENCIES:
+  - SycKit (from `../`)
+
+EXTERNAL SOURCES:
+  SycKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SycKit: 7a7a1f099606eb4163db9086fa55431d63ad67b0
+
+PODFILE CHECKSUM: 81cb1f7217abdfebe7ce78c94b84a77c54b8fbdd
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,10 @@
+use_frameworks!
+
+target 'SycKit_Example' do
+  pod 'SycKit', :path => '../'
+
+  target 'SycKit_Tests' do
+    inherit! :search_paths
+
+  end
+end
