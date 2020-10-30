@@ -1,50 +1,28 @@
-// https://github.com/Quick/Quick
 
-import Quick
-import Nimble
 import SycKit
+import XCTest
+@testable import SycKit_Example
 
-class TableOfContentsSpec: QuickSpec {
-    override func spec() {
-        describe("these will fail") {
+class Tests: XCTestCase {
 
-            it("can do maths") {
-                expect(1) == 2
-            }
+    override func setUp() {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
 
-            it("can read") {
-                expect("number") == "string"
-            }
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
 
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
 
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
-            }
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
         }
     }
+
 }
