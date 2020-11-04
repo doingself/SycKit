@@ -15,7 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        let v = UIView(frame: CGRect(x: 10, y: 100, width: 100, height: 100))
+        // 添加渐变色
+        v.yc.addGradientLayer(startColor: UIColor.yc.getColor(hexString: "#0061FF"), endColor: UIColor.red)
+        self.view.addSubview(v)
     }
 
     override func didReceiveMemoryWarning() {
