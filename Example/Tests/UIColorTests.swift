@@ -32,8 +32,11 @@ class UIColorTests: XCTestCase {
         print("color1 ==== \(color1)")
         print("color2 ==== \(color2)")
         print("color3 ==== \(color3)")
+        
         assert(color1 == color2, "靛青    #4B0082    75,0,130")
-        assert(color2 == color3, "靛青    #4B0082    75,0,130")
+        XCTAssert(color1 == color2, "靛青    #4B0082    75,0,130")
+        XCTAssertTrue(color2 == color3, "靛青    #4B0082    75,0,130")
+        XCTAssertEqual(color1, color3, "靛青    #4B0082    75,0,130")
     }
 
     func testPerformanceExample() throws {
