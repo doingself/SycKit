@@ -54,8 +54,9 @@ extension SycStruct where Base == Data {
     }
     
     /// Data 二进制 转 十六进制 字符串
-    public func convertBinaryToHexadecimal() -> String {
-        return base.map { String(format: "%02X", $0) }.joined(separator: "")
+    public func convertBinaryToHexadecimal(format: Int = 2) -> String {
+        //return base.map { String(format: "%02X", $0) }.joined(separator: "")
+        return base.map { String(format: "%0\(format)X", $0) }.joined(separator: "")
     }
 }
 
