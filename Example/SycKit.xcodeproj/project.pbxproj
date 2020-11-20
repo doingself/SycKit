@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B30A150255AA35A00055679 /* CellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30A14F255AA35A00055679 /* CellTests.swift */; };
 		3B796DF2254C22E1002A7C67 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B796DF1254C22E1002A7C67 /* UIColorTests.swift */; };
+		3BF175BA25662162006F6669 /* BinHexOctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF175B925662162006F6669 /* BinHexOctTests.swift */; };
 		469C71FD38D816E121FAABBF /* Pods_SycKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42A7B73A76B56CF74722B8 /* Pods_SycKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		36DCBF558FB9E93A5F6506E0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3B30A14F255AA35A00055679 /* CellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTests.swift; sourceTree = "<group>"; };
 		3B796DF1254C22E1002A7C67 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
+		3BF175B925662162006F6669 /* BinHexOctTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinHexOctTests.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SycKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SycKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				3B796DF1254C22E1002A7C67 /* UIColorTests.swift */,
 				3B30A14F255AA35A00055679 /* CellTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				3BF175B925662162006F6669 /* BinHexOctTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				3B30A150255AA35A00055679 /* CellTests.swift in Sources */,
+				3BF175BA25662162006F6669 /* BinHexOctTests.swift in Sources */,
 				3B796DF2254C22E1002A7C67 /* UIColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

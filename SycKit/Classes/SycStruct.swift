@@ -56,5 +56,14 @@ extension SycProtocol {
 
 import class Foundation.NSObject
 
-// MARK: NSObject 继承协议后, NSObject 可以使用 `yc`
+// MARK: NSObject 继承 SycProtocol 协议后, NSObject 可以使用 `yc`
 extension NSObject: SycProtocol { }
+
+// MARK: String 继承 SycProtocol 协议后 可以使用 `yc`
+extension String: SycProtocol { }
+
+// MARK: Int 继承 SycProtocol 协议后 可以使用 `yc`
+extension Int: SycProtocol { }
+
+// MARK: Data 继承 SycProtocol 协议后 可以使用 `yc`
+extension Data: SycProtocol { }

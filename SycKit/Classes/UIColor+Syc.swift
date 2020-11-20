@@ -14,7 +14,7 @@ extension SycStruct where Base: UIColor {
         return UIColor(red: r / 255, green: g / 255, blue: b / 255, alpha: a)
     }
     
-    /// 十六进制字符串 转换 UIcolor
+    /// 十六进制字符串 转换 UIColor
     public static func getColor(hexString: String, alpha: CGFloat = 1) -> UIColor {
         let hexColor = hexString.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "#", with: "")
         let scanner = Scanner(string: hexColor)
@@ -31,7 +31,7 @@ extension SycStruct where Base: UIColor {
         return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    /// Int 转换 UIcolor
+    /// Int 转换 UIColor
     public static func getColor(hexInt: Int, alpha: CGFloat = 1) -> UIColor {
         // 转换 16 进制, 并位移
         let red = CGFloat(((hexInt & 0xFF0000) >> 16)) / CGFloat(255.0)
