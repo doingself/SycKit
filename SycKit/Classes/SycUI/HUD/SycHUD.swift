@@ -6,8 +6,8 @@
 //  Copyright (c) 2020 doingself@163.com. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-extension SycStruct where Base == Date {
-
+public class SycHUD: UIView {
+    
 }

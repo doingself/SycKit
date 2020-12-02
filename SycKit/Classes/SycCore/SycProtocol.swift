@@ -9,15 +9,6 @@
 // 鸣谢 RxSwift https://github.com/ReactiveX/RxSwift
 // 鸣谢 RxSwift Reactive.swift
 
-// MARK: 泛型结构体
-public struct SycStruct<Base> {
-    public let base: Base
-    
-    public init(_ base: Base) {
-        self.base = base
-    }
-}
-
 // MARK: 协议
 public protocol SycProtocol {
     // 定义一个协议时，有的时候声明一个或多个关联类型作为协议定义的一部分
@@ -53,17 +44,3 @@ extension SycProtocol {
         set { }
     }
 }
-
-import class Foundation.NSObject
-
-// MARK: NSObject 继承 SycProtocol 协议后, NSObject 可以使用 `yc`
-extension NSObject: SycProtocol { }
-
-// MARK: String 继承 SycProtocol 协议后 可以使用 `yc`
-extension String: SycProtocol { }
-
-// MARK: Int 继承 SycProtocol 协议后 可以使用 `yc`
-extension Int: SycProtocol { }
-
-// MARK: Data 继承 SycProtocol 协议后 可以使用 `yc`
-extension Data: SycProtocol { }

@@ -14,12 +14,8 @@ Pod::Spec.new do |spec|
   #  can feel like a chore to fill in it's definitely to your advantage. The
   #  summary should be tweet-length, and the description more in depth.
   #
-  
-  # 名称 pod search 搜索的关键词, 与 .podspec的名称一致
   spec.name         = "SycKit"
-  # 版本号
   spec.version      = "0.0.1"
-  # 简介
   spec.summary      = "封装一些常用方法."
 
   # This description is used to generate tags and improve search results.
@@ -28,10 +24,9 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  封装一些常用方法. 所有内容通过 yc 进行调用.
+  封装一些常用方法. 所有内容通过 `yc` 进行调用.
                    DESC
 
-  # 项目主页地址
   spec.homepage     = "https://github.com/doingself/SycKit"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -42,10 +37,7 @@ Pod::Spec.new do |spec|
   #  CocoaPods will detect a license file if there is a named LICENSE*
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
-
-  # 许可证
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -57,8 +49,6 @@ Pod::Spec.new do |spec|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-
-  # 作者
   spec.author             = { "syc" => "daviondk@163.com" }
   # Or just: spec.author    = "syc"
   # spec.authors            = { "syc" => "daviondk@163.com" }
@@ -69,7 +59,7 @@ Pod::Spec.new do |spec|
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
-
+  spec.platform = :ios, "12.0"
   # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
 
@@ -78,16 +68,12 @@ Pod::Spec.new do |spec|
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
-  spec.swift_version = '5.0'
-  spec.platform = :ios, "12.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-
-  # 项目的地址
   spec.source       = { :git => "https://github.com/doingself/SycKit.git", :tag => "#{spec.version}" }
 
 
@@ -98,17 +84,13 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
   # 需要包含的源文件
   #'*'表示匹配所有文件
   #'*.{h,m}' 表示匹配所有以.h和.m结尾的文件
   #'**' 表示匹配所有子目录
-  spec.source_files  = 'SycKit/Classes/**/*', "SycKit/Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
-
-  # 公开的头文件
+  # spec.source_files  = 'SycKit/Classes/**/*', "SycKit/Classes/**/*.{h,m}"
+  # spec.exclude_files = "Classes/Exclude"
   # spec.public_header_files = "Classes/**/*.h"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -117,10 +99,8 @@ Pod::Spec.new do |spec|
   #  You can preserve files from being cleaned, please don't preserve
   #  non-essential files like tests, examples and documentation.
   #
-
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
-
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
@@ -129,10 +109,10 @@ Pod::Spec.new do |spec|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-
+  # spec.vendored_frameworks = 'XXXX/*.framework'
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
-
+  # spec.vendored_libraries = 'XXXX/*.a'
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
@@ -142,11 +122,61 @@ Pod::Spec.new do |spec|
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-
-  # 是否支持ARC
-  # spec.requires_arc = true
-
+  
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  
+  # 是否支持ARC
+  #spec.requires_arc = true
+  
+  # 如果使用 use_frameworks! 指定时，pod 应包含静态库框架
+  # 由于需要依赖的三方库都是静态库,如果这里不指定本库为静态库
+  # 则cocoapods中默认会编译成动态库,而此动态库中依赖了静态库,会导致编译失败, 因此这里需要指定编译成静态库
+  #spec.static_framework = true
+  
+  # 是否已弃用该库
+  #spec.deprecated = false
+  
+  # 用到的库
   # spec.dependency "JSONKit", "~> 1.4"
-
+  
+  spec.swift_version = '5.0'
+  
+  # 默认加载 Core, 不设置则加载全部
+  spec.default_subspecs = 'Core'
+  
+  spec.subspec 'Core' do |ss|
+      ss.source_files  = [
+      'SycKit/Classes/SycCore/**/*',
+      "SycKit/Classes/SycCore/**/*.{swift,h,m,plist}"
+      ]
+  end
+  
+  spec.subspec 'Foundation' do |ss|
+      ss.source_files  = [
+      'SycKit/Classes/SycFoundation/**/*',
+      "SycKit/Classes/SycFoundation/**/*.{swift,h,m,plist}"
+      ]
+      ss.dependency 'SycKit/Core'
+  end
+  
+  spec.subspec 'UI' do |ss|
+      ss.source_files  = [
+      'SycKit/Classes/SycUI/**/*',
+      "SycKit/Classes/SycUI/**/*.{swift,h,m,plist}"
+      ]
+      
+      # 指定资源,比如xib,图片等资源都是
+      ss.resource_bundles = {
+          'SycKit' => [
+          'SycKit/Classes/SycUI/**/*.{storyboard,xib,cer,json,plist}',
+          'SycKit/Assets/*.{bundle,xcassets,imageset,png}', # 图片
+          'SycKit/Assets/Localizable/*.lproj' # 国际化
+          ]
+      }
+      
+      ss.frameworks = 'UIKit'
+      ss.dependency 'SycKit/Core'
+      #ss.dependency 'AFNetworking', '~> 2.3'
+  end
+  
 end

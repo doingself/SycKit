@@ -1,7 +1,9 @@
 use_frameworks!
 
 target 'SycKit_Example' do
-  pod 'SycKit', :path => '../'
+  #pod 'SycKit', :path => '../'
+  pod 'SycKit/Foundation', :path => '../'
+  pod 'SycKit/UI', :path => '../'
 
   target 'SycKit_Tests' do
     inherit! :search_paths

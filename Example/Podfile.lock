@@ -1,16 +1,21 @@
 PODS:
-  - SycKit (0.0.1)
+  - SycKit/Core (0.0.1)
+  - SycKit/Foundation (0.0.1):
+    - SycKit/Core
+  - SycKit/UI (0.0.1):
+    - SycKit/Core
 
 DEPENDENCIES:
-  - SycKit (from `../`)
+  - SycKit/Foundation (from `../`)
+  - SycKit/UI (from `../`)
 
 EXTERNAL SOURCES:
   SycKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SycKit: 1fdb4be2654686912b00de8f22e22bddbc3eeda0
+  SycKit: ec9ec1400f0ff42af3b014b744f0d73565fc838a
 
-PODFILE CHECKSUM: 81cb1f7217abdfebe7ce78c94b84a77c54b8fbdd
+PODFILE CHECKSUM: 13df750a13d8cc78e428345e6af4b81d0b46cd49
 
 COCOAPODS: 1.9.3
