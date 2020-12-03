@@ -9,6 +9,10 @@
 import Foundation
 
 extension SycStruct where Base == Data {
+    
+    /// Data 转 String
+    /// - 用法: data.yc.convertUTF8Str()
+    /// - Returns: string
     public func convertUTF8Str() -> String? {
         return String(data: base, encoding: String.Encoding.utf8)
     }

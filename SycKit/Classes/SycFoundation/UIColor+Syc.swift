@@ -9,12 +9,25 @@
 import UIKit
 
 extension SycStruct where Base: UIColor {
-    /// RGB
+    
+    /// 使用 RGB 创建颜色
+    /// - 用法: UIColor.yc.getColor(r: 0, g: 0, b: 0, a: 1)
+    /// - Parameters:
+    ///   - r: 红
+    ///   - g: 绿
+    ///   - b: 蓝
+    ///   - a: 透明度
+    /// - Returns: UIColor
     public static func getColor(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat = 1) -> UIColor {
         return UIColor(red: r / 255, green: g / 255, blue: b / 255, alpha: a)
     }
     
-    /// 十六进制字符串 转换 UIColor
+    /// 使用 十六进制字符串 创建颜色
+    /// - 用法: UIColor.yc.getColor(hexString: "#FFFFFF", alpha: 1)
+    /// - Parameters:
+    ///   - hexString: 十六进制字符串
+    ///   - alpha: 透明度
+    /// - Returns: UIColor
     public static func getColor(hexString: String, alpha: CGFloat = 1) -> UIColor {
         let hexColor = hexString.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "#", with: "")
         let scanner = Scanner(string: hexColor)
@@ -31,7 +44,12 @@ extension SycStruct where Base: UIColor {
         return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    /// Int 转换 UIColor
+    /// 使用 十六进制 创建颜色
+    /// - 用法: UIColor.yc.getColor(hexInt: 0xFFFFFF, alpha: 1)
+    /// - Parameters:
+    ///   - hexInt: 十六进制
+    ///   - alpha: 透明度
+    /// - Returns: UIColor
     public static func getColor(hexInt: Int, alpha: CGFloat = 1) -> UIColor {
         // 转换 16 进制, 并位移
         let red = CGFloat(((hexInt & 0xFF0000) >> 16)) / CGFloat(255.0)

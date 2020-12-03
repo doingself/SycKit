@@ -9,7 +9,10 @@
 import UIKit
 
 extension SycStruct where Base: Bundle {
-    /// CFBundleName
+    
+    /// 获取 App CFBundleName 信息
+    /// - 用法: Bundle.main.yc.getCFBundleName()
+    /// - Returns: CFBundleName
     public func getCFBundleName() -> String? {
         //Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
         return base.object(forInfoDictionaryKey: "CFBundleName") as? String

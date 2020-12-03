@@ -31,6 +31,8 @@ extension SycStruct where Base == Data {
     
     /// Data 转 二进制
     /// NSData和NSMutableData存储的是二进制数据
+    /// - 用法: data.yc.convertBinary()
+    /// - Returns: [UInt8] 二进制
     public func convertBinary() -> [UInt8] {
         /*
          https://www.jianshu.com/p/283425ff575f
@@ -54,6 +56,9 @@ extension SycStruct where Base == Data {
     }
     
     /// Data 二进制 转 十六进制 字符串
+    /// - 用法: data.yc.convertBinaryToHexadecimal()
+    /// - Parameter format: 格式, 默认 2 位
+    /// - Returns: 十六进制 字符串
     public func convertBinaryToHexadecimal(format: Int = 2) -> String {
         //return base.map { String(format: "%02X", $0) }.joined(separator: "")
         return base.map { String(format: "%0\(format)X", $0) }.joined(separator: "")
@@ -64,7 +69,9 @@ extension SycStruct where Base == Data {
 extension SycStruct where Base == String {
     
     /// 十六进制字符串 转 Data 二进制
-    /// - 注: 不是 string.data(using: String.Encoding.utf8)
+    /// - 注意: 不是 string.data(using: String.Encoding.utf8)
+    /// - 用法: string.yc.convertHexadecimalToBinary()
+    /// - Returns: Data 二进制
     public func convertHexadecimalToBinary() -> Data? {
         var data = Data(capacity: base.count / 2)
         do {
@@ -82,6 +89,8 @@ extension SycStruct where Base == String {
     }
     
     /// String 二进制 转 十进制
+    /// - 用法: string.yc.convertBinaryToDecimal()
+    /// - Returns: int 十进制
     public func convertBinaryToDecimal() -> Int {
         var sum:Int = 0
         for c in base {
@@ -93,6 +102,8 @@ extension SycStruct where Base == String {
     }
     
     /// String 八进制 转 十进制
+    /// - 用法: string.yc.convertOctalToDecimal()
+    /// - Returns: int 十进制
     public func convertOctalToDecimal() -> Int {
         var sum:Int = 0
         for c in base {
@@ -104,6 +115,8 @@ extension SycStruct where Base == String {
     }
     
     /// String 十六进制 转 十进制
+    /// - 用法: string.yc.convertHexadecimalToDecimalTo()
+    /// - Returns: int 十进制
     public func convertHexadecimalToDecimalTo() -> Int {
         /*
         let str = base.uppercased()
@@ -130,18 +143,24 @@ extension SycStruct where Base == String {
 extension SycStruct where Base == Int {
     
     /// Int 十进制 转 二进制
+    /// - 用法: int.yc.convertDecimalToBinary()
+    /// - Returns: string 二进制
     public func convertDecimalToBinary() -> String {
         //radix at least 2 and at most 36. The default is 10.
         return String(base, radix: 2, uppercase: true)
     }
     
     /// Int 十进制 转 八进制
+    /// - 用法: int.yc.convertDecimalToOctal()
+    /// - Returns: string 八进制
     public func convertDecimalToOctal() -> String {
         //return String(format: "%0O", base)
         return String(base, radix: 8, uppercase: true)
     }
     
     /// Int 十进制 转 十六进制
+    /// - 用法: int.yc.convertDecimalToHexadecimal()
+    /// - Returns: string 十六进制
     public func convertDecimalToHexadecimal() -> String {
         //return String(format: "%0X", base)
         return String(base, radix: 16, uppercase: true)

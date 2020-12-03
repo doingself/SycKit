@@ -12,6 +12,7 @@ import QuartzCore
 extension SycStruct where Base: UIView {
     
     /// 给 view 添加渐变色
+    /// - 用法: view.yc.addGradientLayer(startColor: .red, endColor: .green, isHorizontal: true)
     /// - Parameters:
     ///   - startColor: 渐变起始颜色
     ///   - endColor: 渐变最终颜色
