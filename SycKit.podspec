@@ -16,6 +16,7 @@ Pod::Spec.new do |spec|
   #
   spec.name         = "SycKit"
   spec.version      = "0.0.1"
+  # 简要描述
   spec.summary      = "封装一些常用方法."
 
   # This description is used to generate tags and improve search results.
@@ -23,6 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
+  # 详细描述
   spec.description  = <<-DESC
   封装一些常用方法. 所有内容通过 `yc` 进行调用.
                    DESC
@@ -59,6 +61,7 @@ Pod::Spec.new do |spec|
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
+  # 最低支持 iOS 版本
   spec.platform = :ios, "12.0"
   # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
@@ -74,6 +77,7 @@ Pod::Spec.new do |spec|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
+  # git 仓库
   spec.source       = { :git => "https://github.com/doingself/SycKit.git", :tag => "#{spec.version}" }
 
 
@@ -99,8 +103,10 @@ Pod::Spec.new do |spec|
   #  You can preserve files from being cleaned, please don't preserve
   #  non-essential files like tests, examples and documentation.
   #
+  # 资源文件
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
+  # spec.resource_bundles = "Resources/*.bundle"
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
@@ -109,10 +115,12 @@ Pod::Spec.new do |spec|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
+  # 依赖的非系统库
   # spec.vendored_frameworks = 'XXXX/*.framework'
+  # spec.vendored_libraries = 'XXXX/*.a'
+  # 依赖的系统库
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
-  # spec.vendored_libraries = 'XXXX/*.a'
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
@@ -136,7 +144,7 @@ Pod::Spec.new do |spec|
   # 是否已弃用该库
   #spec.deprecated = false
   
-  # 用到的库
+  # 依赖的第三方库
   # spec.dependency "JSONKit", "~> 1.4"
   
   spec.swift_version = '5.0'
