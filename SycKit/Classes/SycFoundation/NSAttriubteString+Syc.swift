@@ -6,7 +6,7 @@
 //  Copyright (c) 2020 doingself@163.com. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /*
 NSFontAttributeName               设置字体大小和字体的类型 默认12 Helvetica(Neue)
@@ -34,6 +34,28 @@ NSParagraphStyleAttributeName     设置文本段落排版，为NSParagraphStyle
 
 extension SycStruct where Base: NSAttributedString {
     
+    /// 获取 NSAttributedString 字符串的 size
+    /// - Parameters:
+    ///   - attributes: [NSAttributedString.Key : Any]
+    ///   - maxWidth: 最大宽 CGFloat
+    ///   - maxHeight: 最大高 CGFloat
+    /// - Returns: CGSize
+    func sizeWithAttributes(attributes : [NSAttributedString.Key : Any], maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
+        
+        /*
+        let mulPara = NSMutableParagraphStyle()
+        let attrs = [NSAttributedString.Key.font: font, NSAttributedString.Key.paragraphStyle: mulPara]
+        let attrString = NSAttributedString(string: text, attributes: attrs)
+        var rect = attrString.boundingRect(with: CGSize(width: 11, height: 22), options: .usesLineFragmentOrigin, context: nil)
+        rect.size
+        */
+        let attributedString: NSAttributedString = base
+        let width = maxWidth ?? CGFloat.infinity
+        let height = maxHeight ?? CGFloat.infinity
+        let size = CGSize(width: width, height: height)
+        let rect = attributedString.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
+        return rect.size
+    }
 
 }
 

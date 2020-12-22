@@ -2,9 +2,12 @@ use_frameworks!
 
 target 'SycKit_Example' do
   #pod 'SycKit', :path => '../'
-  pod 'SycKit/Foundation', :path => '../'
-  pod 'SycKit/UI', :path => '../'
+  pod 'SycKit/Foundation', :path => '../' # core + foundation
+  pod 'SycKit/UI', :path => '../' # core + ui
 
+  
+#  pod 'Reusable' # 注册/获取 cell
+  
   target 'SycKit_Tests' do
     inherit! :search_paths
 

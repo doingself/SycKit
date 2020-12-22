@@ -46,4 +46,20 @@ extension SycStruct where Base: UIView {
         // 给 label 添加文字渐变
         //gradientLayer.mask = label.layer
     }
+    
+    /// 部分圆角
+    ///
+    /// - Parameters:
+    ///   - corners: 需要实现为圆角的角，可传入多个
+    ///   - radius: 圆角半径
+    func addCorner(conrners: UIRectCorner , radius: CGFloat) {
+        let view: UIView = base
+        
+        let maskPath = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: conrners, cornerRadii: CGSize(width: radius, height: radius))
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = view.bounds
+        maskLayer.path = maskPath.cgPath
+        view.layer.mask = maskLayer
+    }
 }
