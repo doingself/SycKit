@@ -62,7 +62,7 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
   # 最低支持 iOS 版本
-  spec.platform = :ios, "12.0"
+  spec.platform = :ios, "10.0"
   # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
 
