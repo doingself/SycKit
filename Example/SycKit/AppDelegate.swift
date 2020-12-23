@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SycKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 统一设置样式
+        self.setupAppearance()
+        // 主页
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = self.getRootViewController()
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -44,3 +53,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    /// 主页
+    func getRootViewController() -> UIViewController {
+        
+        let homeVC = HomeViewController()
+        let homeNav = UINavigationController(rootViewController: homeVC)
+        homeNav.tabBarItem = UITabBarItem(title: "home", image: UIImage(named: "tabbaritem-me-normal"), tag: 1)
+        
+        let uiVC = HomeViewController()
+        let uiNav = UINavigationController(rootViewController: uiVC)
+        uiNav.tabBarItem = UITabBarItem(title: "home", image: UIImage(named: "tabbaritem-me-normal"), tag: 1)
+        uiNav.tabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        
+        
+        let meVC = MeViewController()
+        let meNav = UINavigationController(rootViewController: meVC)
+        let meTabBarItem = UITabBarItem(title: "me", image: UIImage(named: "tabbaritem-me-normal"), tag: 3)
+        meTabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        meTabBarItem.badgeValue = "9+"
+        meTabBarItem.badgeColor = UIColor.systemGreen
+        meNav.tabBarItem = meTabBarItem
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [homeNav, uiNav, meNav]
+        return tabBarController
+    }
+    
+    /// 统一设置样式
+    func setupAppearance(){
+        // systemOrange 橙色
+        // systemIndigo 靛蓝
+        // systemPurple 紫色
+        // systemPink 粉红色
+        // systemTeal 蓝绿色
+        
+        // UINavigationBar
+        // - UINavigationBar().tintColor = ...
+        // - UINavigationBar().standardAppearance = UINavigationBarAppearance()
+        // - UINavigationBar.appearance()...
+        
+        // nav 背景色
+        UINavigationBar.appearance().barTintColor = UIColor.systemTeal
+        // nav - image 色
+        UINavigationBar.appearance().tintColor = UIColor.black
+        // nav title 样式
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        
+        //UITabBarController.UITabBar
+        // 背景色
+        UITabBar.appearance().barTintColor = UIColor.systemTeal
+        // 文字图片颜色
+        UITabBar.appearance().tintColor = UIColor.white
+    }
+}
