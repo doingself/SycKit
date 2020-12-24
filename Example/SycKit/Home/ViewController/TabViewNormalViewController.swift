@@ -1,8 +1,8 @@
 //
-//  HomeViewController.swift
+//  TabViewNormalViewController.swift
 //  SycKit_Example
 //
-//  Created by swift-syc on 2020/12/22.
+//  Created by swift-syc on 2020/12/24.
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
@@ -10,16 +10,12 @@ import UIKit
 import SnapKit
 import SycKit
 
-/// 原生组件/三方库 Snippets
-class HomeViewController: UIViewController {
+/// 纯 UITableView
+class TabViewNormalViewController: UIViewController {
     
     private let tableView = UITableView()
-    private let datas: [UIViewController.Type] = [
-        HomeViewController.self,
-        TabViewNormalViewController.self,
-        TabViewEditRowExampleViewController.self,
-        PresentStyleViewController.self,
-        MJRefreshExampleViewController.self
+    private let datas: [Any] = [
+        1,2,3,4,5,6,7,8
     ]
     
     override func viewDidLoad() {
@@ -27,8 +23,7 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
-        //self.title = "原生组件/三方库 Snippets" // 会同时修改 tabbar title
-        self.navigationItem.title = "原生组件/三方库 Snippets"
+        self.title = "UITableView"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.camera, target: nil, action: nil)
         
@@ -71,8 +66,7 @@ class HomeViewController: UIViewController {
 }
 
 // MARK: table delegate / datasource
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    
+extension TabViewNormalViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }
@@ -81,19 +75,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let data = datas[indexPath.row]
         let cell = UITableViewCell.yc.dequeueReusableCell(in: tableView, for: indexPath)
         cell.textLabel?.text = "\(data)"
+        cell.detailTextLabel?.text = "\(indexPath.section)-\(indexPath.row)"
+        cell.selectionStyle = .gray
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let data: UIViewController.Type = datas[indexPath.row]
-        let vc: UIViewController = data.init()
-        
-        if vc is PresentStyleViewController {
-            self.present(vc, animated: true, completion: nil)
-        } else {
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
     }
 }
+

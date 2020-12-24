@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import SycKit
 
-/// 原生 tableView  的使用 (编辑/索引)
+/// UITableView (编辑/索引)
 class TabViewEditRowExampleViewController: UIViewController {
     
     private let tableView = UITableView()
@@ -28,7 +28,7 @@ class TabViewEditRowExampleViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
-        self.title = "tableView"
+        self.title = "UITableView 编辑/索引"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.edit, target: self, action: #selector(rightBarBtnItemAction))
         

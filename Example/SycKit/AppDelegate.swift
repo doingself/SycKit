@@ -61,10 +61,10 @@ extension AppDelegate {
         let homeNav = UINavigationController(rootViewController: homeVC)
         homeNav.tabBarItem = UITabBarItem(title: "home", image: UIImage(named: "tabbaritem-me-normal"), tag: 1)
         
-        let uiVC = HomeViewController()
-        let uiNav = UINavigationController(rootViewController: uiVC)
-        uiNav.tabBarItem = UITabBarItem(title: "home", image: UIImage(named: "tabbaritem-me-normal"), tag: 1)
-        uiNav.tabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        let podVC = PodExampleViewController()
+        let podNav = UINavigationController(rootViewController: podVC)
+        podNav.tabBarItem = UITabBarItem(title: "home", image: UIImage(named: "tabbaritem-me-normal"), tag: 1)
+        podNav.tabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         
         
         let meVC = MeViewController()
@@ -76,7 +76,7 @@ extension AppDelegate {
         meNav.tabBarItem = meTabBarItem
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [homeNav, uiNav, meNav]
+        tabBarController.viewControllers = [homeNav, podNav, meNav]
         return tabBarController
     }
     

@@ -13,6 +13,9 @@
 		3BE75DBE2593161700D0932A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE75DBD2593161700D0932A /* HomeViewController.swift */; };
 		3BE75EA925934DBF00D0932A /* MJRefreshExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE75EA825934DBF00D0932A /* MJRefreshExampleViewController.swift */; };
 		3BE75EB12593765D00D0932A /* TabViewEditRowExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE75EB02593765D00D0932A /* TabViewEditRowExampleViewController.swift */; };
+		3BE75EBD2594754900D0932A /* PodExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE75EBC2594754900D0932A /* PodExampleViewController.swift */; };
+		3BE75EC3259475C200D0932A /* TabViewNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE75EC2259475C200D0932A /* TabViewNormalViewController.swift */; };
+		3BE75F07259493F400D0932A /* PresentStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE75F06259493F400D0932A /* PresentStyleViewController.swift */; };
 		3BF175BA25662162006F6669 /* BinHexOctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF175B925662162006F6669 /* BinHexOctTests.swift */; };
 		469C71FD38D816E121FAABBF /* Pods_SycKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42A7B73A76B56CF74722B8 /* Pods_SycKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -44,6 +47,9 @@
 		3BE75DBD2593161700D0932A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3BE75EA825934DBF00D0932A /* MJRefreshExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJRefreshExampleViewController.swift; sourceTree = "<group>"; };
 		3BE75EB02593765D00D0932A /* TabViewEditRowExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewEditRowExampleViewController.swift; sourceTree = "<group>"; };
+		3BE75EBC2594754900D0932A /* PodExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodExampleViewController.swift; sourceTree = "<group>"; };
+		3BE75EC2259475C200D0932A /* TabViewNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewNormalViewController.swift; sourceTree = "<group>"; };
+		3BE75F06259493F400D0932A /* PresentStyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentStyleViewController.swift; sourceTree = "<group>"; };
 		3BF175B925662162006F6669 /* BinHexOctTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinHexOctTests.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SycKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SycKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,8 +117,26 @@
 			isa = PBXGroup;
 			children = (
 				3BE75DBD2593161700D0932A /* HomeViewController.swift */,
+				3BE75F06259493F400D0932A /* PresentStyleViewController.swift */,
+				3BE75EC2259475C200D0932A /* TabViewNormalViewController.swift */,
 				3BE75EB02593765D00D0932A /* TabViewEditRowExampleViewController.swift */,
 				3BE75EA825934DBF00D0932A /* MJRefreshExampleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3BE75EB62594752C00D0932A /* PodExample */ = {
+			isa = PBXGroup;
+			children = (
+				3BE75EB72594752C00D0932A /* ViewController */,
+			);
+			path = PodExample;
+			sourceTree = "<group>";
+		};
+		3BE75EB72594752C00D0932A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BE75EBC2594754900D0932A /* PodExampleViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -150,6 +174,7 @@
 		607FACD21AFB9204008FA782 /* Example for SycKit */ = {
 			isa = PBXGroup;
 			children = (
+				3BE75EB62594752C00D0932A /* PodExample */,
 				3BE75DBB2593161700D0932A /* Home */,
 				3B02B5B42591FC1200221443 /* ME */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -390,10 +415,13 @@
 			files = (
 				3BE75EA925934DBF00D0932A /* MJRefreshExampleViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				3BE75EC3259475C200D0932A /* TabViewNormalViewController.swift in Sources */,
 				3BE75EB12593765D00D0932A /* TabViewEditRowExampleViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3B02B5B72591FC1200221443 /* MeViewController.swift in Sources */,
 				3BE75DBE2593161700D0932A /* HomeViewController.swift in Sources */,
+				3BE75EBD2594754900D0932A /* PodExampleViewController.swift in Sources */,
+				3BE75F07259493F400D0932A /* PresentStyleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
