@@ -40,7 +40,7 @@ extension SycStruct where Base: NSAttributedString {
     ///   - maxWidth: 最大宽 CGFloat
     ///   - maxHeight: 最大高 CGFloat
     /// - Returns: CGSize
-    func sizeWithAttributes(attributes : [NSAttributedString.Key : Any], maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
+    public func sizeWithAttributes(attributes : [NSAttributedString.Key : Any], maxWidth: CGFloat?, maxHeight: CGFloat?) -> CGSize {
         
         /*
         let mulPara = NSMutableParagraphStyle()

@@ -52,7 +52,7 @@ extension SycStruct where Base: UIView {
     /// - Parameters:
     ///   - corners: 需要实现为圆角的角，可传入多个
     ///   - radius: 圆角半径
-    func addCorner(conrners: UIRectCorner , radius: CGFloat) {
+    public func addCorner(conrners: UIRectCorner , radius: CGFloat) {
         let view: UIView = base
         
         let maskPath = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: conrners, cornerRadii: CGSize(width: radius, height: radius))

@@ -13,7 +13,7 @@ extension SycStruct where Base == Date {
     /// 获取 date 的当天开始时间
     /// - Returns: date (yyyy-mm-dd 00:00:00)
     public func startDay() -> Date {
-        let date = Calendar.current.startOfDay(for: base)
-        return date
+        let date: Date = base
+        return Calendar.current.startOfDay(for: date)
     }
 }
