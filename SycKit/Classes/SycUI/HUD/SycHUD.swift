@@ -8,6 +8,8 @@
 
 import UIKit
 
+// 鸣谢 https://github.com/pkluz/PKHUD
+
 public class SycHUD: UIView {
     
 }

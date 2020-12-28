@@ -16,8 +16,24 @@ class PresentStyleViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         // 半透明 设置
+        
+        //case coverVertical = 0 // 从底部升上来的方式
+        //case flipHorizontal = 1 // 卡片翻转形式
+        //case crossDissolve = 2 // 快速闪现
+        //case partialCurl = 3 // 书本翻页效果
         self.modalTransitionStyle = .crossDissolve
-        self.modalPresentationStyle = .overCurrentContext
+        
+        //case fullScreen = 0 //由下到上,全屏覆盖
+        //case pageSheet = 1
+        //case formSheet = 2
+        //case currentContext = 3
+        //case custom = 4
+        //case overFullScreen = 5
+        //case overCurrentContext = 6
+        //case popover = 7
+        //case none = -1
+        //case automatic = -2
+        self.modalPresentationStyle = .overFullScreen // 遮盖 tabbar
         
     }
     
@@ -30,7 +46,7 @@ class PresentStyleViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapViewAction)))
         

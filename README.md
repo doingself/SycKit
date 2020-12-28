@@ -7,7 +7,8 @@
 
 ## 鸣谢
 
-- [RxSwift](https://github.com/ReactiveX/RxSwift)
+- [ReactiveX/RxSwift](https://github.com/ReactiveX/RxSwift)
+- [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
 - https://gitmoji.carloscuesta.me
 
 ## 提交记录 emoji 说明

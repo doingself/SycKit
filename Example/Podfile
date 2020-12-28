@@ -6,9 +6,15 @@ target 'SycKit_Example' do
   pod 'SycKit/UI', :path => '../' # core + ui
 
   
-#  pod 'Reusable' # 注册/获取 cell
   pod 'SnapKit' # 布局
   pod 'MJRefresh' # 下拉刷新
+  
+  # rx
+  pod 'RxSwift' # rx
+  pod 'RxCocoa' # 将UIKit中很多视图控件的很多属性值封装成了 Observable
+  pod 'NSObject+Rx' # rx.disposeBag 无需 let disposeBag = DisposeBag()
+  pod 'RxDataSources' # data source
+  
   
   target 'SycKit_Tests' do
     inherit! :search_paths
