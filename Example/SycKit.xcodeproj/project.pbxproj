@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19C1504C25A2C9C100787C27 /* TabViewRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1504B25A2C9C100787C27 /* TabViewRxViewController.swift */; };
+		19C1505025A2C9DC00787C27 /* SearchTabViewRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1504F25A2C9DC00787C27 /* SearchTabViewRxViewController.swift */; };
+		19C1505425A2CAF600787C27 /* RxSwiftReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1505325A2CAF600787C27 /* RxSwiftReadMe.swift */; };
+		19C1505825A2CB2200787C27 /* SearchTabViewRxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1505725A2CB2200787C27 /* SearchTabViewRxViewModel.swift */; };
+		19C1508225A4518400787C27 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1508125A4518400787C27 /* RegisterViewController.swift */; };
+		19C1508825A4519600787C27 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1508725A4519600787C27 /* RegisterViewModel.swift */; };
+		19C1508C25A452E700787C27 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1508B25A452E700787C27 /* RegisterService.swift */; };
+		19C1509025A453B900787C27 /* RegisterNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1508F25A453B900787C27 /* RegisterNetworkService.swift */; };
+		19C1511225A469A900787C27 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1511125A469A900787C27 /* ActivityIndicator.swift */; };
 		3B30A150255AA35A00055679 /* CellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30A14F255AA35A00055679 /* CellTests.swift */; };
 		3B796DF2254C22E1002A7C67 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B796DF1254C22E1002A7C67 /* UIColorTests.swift */; };
 		3BE75F1C2595885300D0932A /* TabViewNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE75F162595885300D0932A /* TabViewNormalViewController.swift */; };
@@ -40,6 +49,15 @@
 
 /* Begin PBXFileReference section */
 		0DED3956C028D13D040D4976 /* Pods-SycKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SycKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-SycKit_Tests/Pods-SycKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		19C1504B25A2C9C100787C27 /* TabViewRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewRxViewController.swift; sourceTree = "<group>"; };
+		19C1504F25A2C9DC00787C27 /* SearchTabViewRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewRxViewController.swift; sourceTree = "<group>"; };
+		19C1505325A2CAF600787C27 /* RxSwiftReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftReadMe.swift; sourceTree = "<group>"; };
+		19C1505725A2CB2200787C27 /* SearchTabViewRxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewRxViewModel.swift; sourceTree = "<group>"; };
+		19C1508125A4518400787C27 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		19C1508725A4519600787C27 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		19C1508B25A452E700787C27 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		19C1508F25A453B900787C27 /* RegisterNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetworkService.swift; sourceTree = "<group>"; };
+		19C1511125A469A900787C27 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		1BC05EC3ED0E16921E331FA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		36DCBF558FB9E93A5F6506E0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3B30A14F255AA35A00055679 /* CellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTests.swift; sourceTree = "<group>"; };
@@ -91,6 +109,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C1508025A4516C00787C27 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				19C1508125A4518400787C27 /* RegisterViewController.swift */,
+				19C1508725A4519600787C27 /* RegisterViewModel.swift */,
+				19C1508B25A452E700787C27 /* RegisterService.swift */,
+				19C1508F25A453B900787C27 /* RegisterNetworkService.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		3B02B5B42591FC1200221443 /* ME */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +152,13 @@
 		3BE75F172595885300D0932A /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				19C1508025A4516C00787C27 /* Register */,
 				3BE75F232595887B00D0932A /* LoginRxViewController.swift */,
+				19C1504B25A2C9C100787C27 /* TabViewRxViewController.swift */,
+				19C1505325A2CAF600787C27 /* RxSwiftReadMe.swift */,
+				19C1504F25A2C9DC00787C27 /* SearchTabViewRxViewController.swift */,
+				19C1505725A2CB2200787C27 /* SearchTabViewRxViewModel.swift */,
+				19C1511125A469A900787C27 /* ActivityIndicator.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -381,24 +416,28 @@
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SycKit/SycKit.framework",
+				"${BUILT_PRODUCTS_DIR}/WeakMapTable/WeakMapTable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SycKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WeakMapTable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -413,15 +452,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE76677259A0E4A00D0932A /* MeViewController.swift in Sources */,
+				19C1504C25A2C9C100787C27 /* TabViewRxViewController.swift in Sources */,
+				19C1511225A469A900787C27 /* ActivityIndicator.swift in Sources */,
+				19C1505425A2CAF600787C27 /* RxSwiftReadMe.swift in Sources */,
+				19C1508825A4519600787C27 /* RegisterViewModel.swift in Sources */,
 				3BE75F1F2595885300D0932A /* PresentStyleViewController.swift in Sources */,
 				3BE75F1E2595885300D0932A /* MJRefreshExampleViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				19C1508225A4518400787C27 /* RegisterViewController.swift in Sources */,
 				3BE75F1D2595885300D0932A /* TabViewEditRowExampleViewController.swift in Sources */,
 				3BE75F1C2595885300D0932A /* TabViewNormalViewController.swift in Sources */,
 				3BE76673259A0E3500D0932A /* PodExampleViewController.swift in Sources */,
+				19C1505825A2CB2200787C27 /* SearchTabViewRxViewModel.swift in Sources */,
 				3BE75F202595885300D0932A /* HomeViewController.swift in Sources */,
+				19C1509025A453B900787C27 /* RegisterNetworkService.swift in Sources */,
 				3BE75F242595887B00D0932A /* LoginRxViewController.swift in Sources */,
+				19C1508C25A452E700787C27 /* RegisterService.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				19C1505025A2C9DC00787C27 /* SearchTabViewRxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

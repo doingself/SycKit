@@ -55,6 +55,11 @@ extension SycStruct where Base: UIColor {
         let red = CGFloat(((hexInt & 0xFF0000) >> 16)) / CGFloat(255.0)
         let green = CGFloat(((hexInt & 0xFF00) >> 8)) / CGFloat(255.0)
         let blue = CGFloat(hexInt & 0xFF) / CGFloat(255.0)
+        
+        //let red1 = CGFloat(hexInt >> 16 & 0xff) / 255
+        //let green1 = CGFloat(hexInt >> 8 & 0xff) / 255
+        //let blue1  = CGFloat(hexInt & 0xff) / 255
+        
         return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 }

@@ -9,11 +9,17 @@ target 'SycKit_Example' do
   pod 'SnapKit' # 布局
   pod 'MJRefresh' # 下拉刷新
   
-  # rx
-  pod 'RxSwift' # rx
-  pod 'RxCocoa' # 将UIKit中很多视图控件的很多属性值封装成了 Observable
+  # RxSwift：它只是基于 Swift 语言的 Rx 标准实现接口库，所以 RxSwift 里不包含任何 Cocoa 或者 UI方面的类。
+  pod 'RxSwift'
+  
+  # RxCocoa：是基于 RxSwift 针对于 iOS开发的一个库，它通过 Extension 的方法给原生的比如 UI 控件添加了 Rx 的特性，使得我们更容易订阅和响应这些控件的事件。
+  pod 'RxCocoa'
+  
   pod 'NSObject+Rx' # rx.disposeBag 无需 let disposeBag = DisposeBag()
   pod 'RxDataSources' # data source
+  
+  # ReactorKit 是一个轻量的响应式编程框架。它结合了 Flux 和响应式编程。用户行为和页面状态都是通过序列相互传递。同时这些序列都是单向的： 页面（View）只能发出用户行为; 而反应器（Reactor）只能发出状态。
+  pod 'ReactorKit'
   
   
   target 'SycKit_Tests' do

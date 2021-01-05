@@ -8,6 +8,10 @@
 
 import UIKit
 
+// 鸣谢 https://www.hangge.com/blog/cache/detail_2029.html
+
+
+/// Rx 登录页面 (官方 demo)
 class LoginRxViewController: UIViewController {
 
     override func viewDidLoad() {

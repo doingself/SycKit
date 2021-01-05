@@ -16,10 +16,15 @@ class HomeViewController: UIViewController {
     private let tableView = UITableView()
     private let datas: [UIViewController.Type] = [
         HomeViewController.self,
-        TabViewNormalViewController.self,
-        TabViewEditRowExampleViewController.self,
-        PresentStyleViewController.self,
-        MJRefreshExampleViewController.self
+        TabViewNormalViewController.self, // 原生 table view
+        TabViewEditRowExampleViewController.self, // 原生 table view 编辑
+        PresentStyleViewController.self, // 弹出半透明 vc
+        MJRefreshExampleViewController.self, // MJRefresh demo
+        RegisterViewController.self, // Rx 注册页面 (hangge demo)
+        LoginRxViewController.self, // Rx 登录页面 (官方 demo)
+        TabViewRxViewController.self, // RxDataSources Rx table view
+        SearchTabViewRxViewController.self, // RxDataSources Rx 实时搜索 table view
+        
     ]
     
     override func viewDidLoad() {
