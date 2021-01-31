@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1982EFB825C00C4D00899013 /* ReactorKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1982EFB725C00C4D00899013 /* ReactorKitDemoViewController.swift */; };
+		1982EFBE25C00C5900899013 /* ReactorKitDemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1982EFBD25C00C5900899013 /* ReactorKitDemoViewModel.swift */; };
+		1982EFC225C00C6500899013 /* ReactorKitDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1982EFC125C00C6500899013 /* ReactorKitDemoModel.swift */; };
+		1982EFC625C00C7A00899013 /* ReactorKitDemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1982EFC525C00C7A00899013 /* ReactorKitDemoTableViewCell.swift */; };
 		19C1504C25A2C9C100787C27 /* TabViewRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1504B25A2C9C100787C27 /* TabViewRxViewController.swift */; };
 		19C1505025A2C9DC00787C27 /* SearchTabViewRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1504F25A2C9DC00787C27 /* SearchTabViewRxViewController.swift */; };
 		19C1505425A2CAF600787C27 /* RxSwiftReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1505325A2CAF600787C27 /* RxSwiftReadMe.swift */; };
@@ -49,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		0DED3956C028D13D040D4976 /* Pods-SycKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SycKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-SycKit_Tests/Pods-SycKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1982EFB725C00C4D00899013 /* ReactorKitDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitDemoViewController.swift; sourceTree = "<group>"; };
+		1982EFBD25C00C5900899013 /* ReactorKitDemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitDemoViewModel.swift; sourceTree = "<group>"; };
+		1982EFC125C00C6500899013 /* ReactorKitDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitDemoModel.swift; sourceTree = "<group>"; };
+		1982EFC525C00C7A00899013 /* ReactorKitDemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitDemoTableViewCell.swift; sourceTree = "<group>"; };
 		19C1504B25A2C9C100787C27 /* TabViewRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewRxViewController.swift; sourceTree = "<group>"; };
 		19C1504F25A2C9DC00787C27 /* SearchTabViewRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewRxViewController.swift; sourceTree = "<group>"; };
 		19C1505325A2CAF600787C27 /* RxSwiftReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftReadMe.swift; sourceTree = "<group>"; };
@@ -109,6 +117,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1982EFB625C00C3500899013 /* ReactorKit */ = {
+			isa = PBXGroup;
+			children = (
+				1982EFB725C00C4D00899013 /* ReactorKitDemoViewController.swift */,
+				1982EFBD25C00C5900899013 /* ReactorKitDemoViewModel.swift */,
+				1982EFC125C00C6500899013 /* ReactorKitDemoModel.swift */,
+				1982EFC525C00C7A00899013 /* ReactorKitDemoTableViewCell.swift */,
+			);
+			path = ReactorKit;
+			sourceTree = "<group>";
+		};
 		19C1508025A4516C00787C27 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				3BE75F1B2595885300D0932A /* HomeViewController.swift */,
+				1982EFB625C00C3500899013 /* ReactorKit */,
 				3BE75F192595885300D0932A /* MJRefreshExampleViewController.swift */,
 				3BE75F1A2595885300D0932A /* PresentStyleViewController.swift */,
 				3BE75F172595885300D0932A /* RxSwift */,
@@ -452,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE76677259A0E4A00D0932A /* MeViewController.swift in Sources */,
+				1982EFC625C00C7A00899013 /* ReactorKitDemoTableViewCell.swift in Sources */,
 				19C1504C25A2C9C100787C27 /* TabViewRxViewController.swift in Sources */,
 				19C1511225A469A900787C27 /* ActivityIndicator.swift in Sources */,
 				19C1505425A2CAF600787C27 /* RxSwiftReadMe.swift in Sources */,
@@ -460,13 +481,16 @@
 				3BE75F1E2595885300D0932A /* MJRefreshExampleViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				19C1508225A4518400787C27 /* RegisterViewController.swift in Sources */,
+				1982EFB825C00C4D00899013 /* ReactorKitDemoViewController.swift in Sources */,
 				3BE75F1D2595885300D0932A /* TabViewEditRowExampleViewController.swift in Sources */,
 				3BE75F1C2595885300D0932A /* TabViewNormalViewController.swift in Sources */,
+				1982EFBE25C00C5900899013 /* ReactorKitDemoViewModel.swift in Sources */,
 				3BE76673259A0E3500D0932A /* PodExampleViewController.swift in Sources */,
 				19C1505825A2CB2200787C27 /* SearchTabViewRxViewModel.swift in Sources */,
 				3BE75F202595885300D0932A /* HomeViewController.swift in Sources */,
 				19C1509025A453B900787C27 /* RegisterNetworkService.swift in Sources */,
 				3BE75F242595887B00D0932A /* LoginRxViewController.swift in Sources */,
+				1982EFC225C00C6500899013 /* ReactorKitDemoModel.swift in Sources */,
 				19C1508C25A452E700787C27 /* RegisterService.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				19C1505025A2C9DC00787C27 /* SearchTabViewRxViewController.swift in Sources */,

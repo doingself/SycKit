@@ -79,6 +79,7 @@ class RegisterViewController: UIViewController {
         signupButton.frame = CGRect(x: 20, y: y, width: 200, height: 30)
         
         activityIndicatorView.frame = CGRect(x: 40, y: y, width: 30, height: 30)
+        activityIndicatorView.hidesWhenStopped = true
         
         self.view.addSubview(usernameField)
         self.view.addSubview(usernameValidationLabel)

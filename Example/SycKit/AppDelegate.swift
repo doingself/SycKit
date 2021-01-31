@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = self.getRootViewController()
         window?.makeKeyAndVisible()
         
-        let rm = RxSwiftReadMe()
-        rm.testObservableCreate()
+        // 测试 Rx
+        RxSwiftReadMe().test()
         
         return true
     }

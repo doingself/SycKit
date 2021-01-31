@@ -30,6 +30,8 @@ import NSObject_Rx
 struct RxSwiftReadMe {
     // 管理多个订阅行为的销毁
     let disposeBag = DisposeBag()
+    
+    let label = UILabel()
 }
 
 // MARK: Observable
@@ -120,7 +122,6 @@ extension RxSwiftReadMe {
         observable.bind(to: observer).disposed(by: disposeBag)
         
         //观察者 4
-        let label = UILabel()
         let binder: Binder<String> = Binder(label) { (view, text) in
             //收到发出的索引数后显示到label上
             view.text = text
@@ -308,7 +309,7 @@ extension RxSwiftReadMe {
     
     // Swift - RxSwift的使用详解27（双向绑定：<->）https://www.hangge.com/blog/cache/detail_1974.html
     
-    func test(){
+    func testOperator(){
         Observable.of(1, 2, 3, 4)
             .take(2)
             .subscribe(onNext: { print($0) })
@@ -359,3 +360,24 @@ extension RxSwiftReadMe {
 }
 
 
+extension RxSwiftReadMe {
+    func test(){
+        
+        let publishSubject = PublishSubject<String>()
+        
+        //由于当前没有任何订阅者，所以这条信息不会输出到控制台
+        publishSubject.onNext("111")
+        publishSubject.onNext("222")
+        
+        
+        // subscribe - do | bind - driver
+        publishSubject.subscribe{ print("subscribe \($0)")}.disposed(by: disposeBag)
+        publishSubject.do { print("do1 \($0)")}.asObservable().bind(to: label.rx.text).disposed(by: disposeBag)
+        publishSubject.do { print("do2 \($0)")}.asDriver(onErrorJustReturn: "000").drive(label.rx.text).disposed(by: disposeBag)
+        
+        publishSubject.onNext("333")
+        publishSubject.onNext("444")
+        publishSubject.onCompleted()
+        
+    }
+}
