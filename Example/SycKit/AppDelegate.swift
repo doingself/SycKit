@@ -28,6 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 测试 Rx
         RxSwiftReadMe().test()
         
+        let isDebug = UIApplication.yc.isDebug
+        let isSimulator = UIApplication.yc.isSimulator
+        let isBeginXcode = UIApplication.yc.isBeginXcode
+        
+        print("isDebug: \(isDebug)")
+        print("isSimulator: \(isSimulator)")
+        print("isBeginXcode: \(isBeginXcode)")
+        
         return true
     }
 
