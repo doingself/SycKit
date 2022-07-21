@@ -1,0 +1,6 @@
+framework module Pods_SycKit_Tests {
+  umbrella header "Pods-SycKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
