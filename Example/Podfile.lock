@@ -1,22 +1,41 @@
 PODS:
-  - Differentiator (4.0.1)
-  - MJRefresh (3.5.0)
-  - "NSObject+Rx (5.1.0)":
-    - RxSwift (~> 5.1)
-  - ReactorKit (2.1.1):
-    - RxSwift (~> 5.0)
+  - Alamofire (5.6.1)
+  - CleanJSON (1.0.9)
+  - Differentiator (5.0.0)
+  - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManagerSwift (6.5.10)
+  - JXSegmentedView (1.3.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.5)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - ReactorKit (3.2.0):
+    - RxSwift (~> 6.0)
     - WeakMapTable (~> 1.1)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
-  - SnapKit (5.0.1)
+  - Reusable (4.1.2):
+    - Reusable/Storyboard (= 4.1.2)
+    - Reusable/View (= 4.1.2)
+  - Reusable/Storyboard (4.1.2)
+  - Reusable/View (4.1.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxViewController (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - SnapKit (5.6.0)
   - SycKit/Core (0.0.1)
   - SycKit/Foundation (0.0.1):
     - SycKit/Core
@@ -25,26 +44,43 @@ PODS:
   - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
-  - MJRefresh
-  - "NSObject+Rx"
-  - ReactorKit
-  - RxCocoa
-  - RxDataSources
-  - RxSwift
-  - SnapKit
+  - CleanJSON (= 1.0.9)
+  - DZNEmptyDataSet (= 1.8.1)
+  - IQKeyboardManagerSwift (= 6.5.10)
+  - JXSegmentedView (= 1.3.0)
+  - MBProgressHUD (= 1.2.0)
+  - MJRefresh (= 3.7.5)
+  - Moya/RxSwift (= 15.0)
+  - "NSObject+Rx (= 5.2.2)"
+  - ReactorKit (= 3.2.0)
+  - Reusable (= 4.1.2)
+  - RxCocoa (= 6.5.0)
+  - RxDataSources (= 5.0)
+  - RxSwift (= 6.5.0)
+  - RxViewController (= 2.0.0)
+  - SnapKit (= 5.6.0)
   - SycKit/Foundation (from `../`)
   - SycKit/UI (from `../`)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - CleanJSON
     - Differentiator
+    - DZNEmptyDataSet
+    - IQKeyboardManagerSwift
+    - JXSegmentedView
+    - MBProgressHUD
     - MJRefresh
+    - Moya
     - "NSObject+Rx"
     - ReactorKit
+    - Reusable
     - RxCocoa
     - RxDataSources
     - RxRelay
     - RxSwift
+    - RxViewController
     - SnapKit
     - WeakMapTable
 
@@ -53,18 +89,27 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
-  ReactorKit: 6d894a20c3d508344320901cd8e386fde92df4b6
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  CleanJSON: 910a36465ce4829e264a902ccf6d1455fdd9f980
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  ReactorKit: e8b11d6b9c415405f381669b095c154a05b59eca
+  Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SycKit: d5dcf12b085a50c5a120aff7e7b1111ff1bf468f
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: b532206ea4676b53083288632e00ddfb99d03757
+PODFILE CHECKSUM: 6f1229423796a70ffa62becac682a550b372485c
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
