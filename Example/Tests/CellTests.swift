@@ -53,14 +53,14 @@ class CellTests: XCTestCase {
         
         // 注册 cell
         UICollectionViewCell.yc.register(in: collectionView)
-        UICollectionReusableView.yc.register(in: collectionView, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader)
+        UICollectionReusableView.yc.register(in: collectionView, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
         
         // 这是一个 IndexPath
         let indexPath = IndexPath(item: 0, section: 0)
         
         // 获取 cell / header
         let cell = UICollectionViewCell.yc.dequeueReusableCell(in: collectionView, for: indexPath)
-        let view = UICollectionReusableView.yc.dequeueReusableSupplementaryView(in: collectionView, ofKind: UICollectionElementKindSectionHeader, for: indexPath)
+        let view = UICollectionReusableView.yc.dequeueReusableSupplementaryView(in: collectionView, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
         
         print(cell)
         print(view)

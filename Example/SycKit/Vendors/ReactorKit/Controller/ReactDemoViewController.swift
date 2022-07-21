@@ -41,7 +41,7 @@ class ReactDemoViewController: UIViewController, View {
         
         tab.backgroundColor = UIColor.white
         tab.estimatedRowHeight = 44
-        tab.rowHeight = UITableViewAutomaticDimension //UITableView.automaticDimension
+        tab.rowHeight = UITableView.automaticDimension
         tab.separatorInset = .zero
         tab.keyboardDismissMode = .onDrag
         // 在 delegate 后设置 或者设置 高度为 0.1 修复 偏移

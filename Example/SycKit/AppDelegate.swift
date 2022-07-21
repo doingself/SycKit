@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // 统一设置样式
@@ -77,13 +77,13 @@ extension AppDelegate {
         let podVC = PodExampleViewController()
         let podNav = UINavigationController(rootViewController: podVC)
         podNav.tabBarItem = UITabBarItem(title: "home", image: UIImage(named: "tabbaritem-me-normal"), tag: 1)
-        podNav.tabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        podNav.tabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         
         
         let meVC = MeViewController()
         let meNav = UINavigationController(rootViewController: meVC)
         let meTabBarItem = UITabBarItem(title: "me", image: UIImage(named: "tabbaritem-me-normal"), tag: 3)
-        meTabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        meTabBarItem.selectedImage = UIImage(named: "tabbaritem-me-selected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         meTabBarItem.badgeValue = "9+"
         meTabBarItem.badgeColor = UIColor.systemGreen
         meNav.tabBarItem = meTabBarItem

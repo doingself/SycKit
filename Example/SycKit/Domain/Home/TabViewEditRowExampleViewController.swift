@@ -30,7 +30,7 @@ class TabViewEditRowExampleViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.title = "UITableView 编辑/索引"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.edit, target: self, action: #selector(rightBarBtnItemAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: self, action: #selector(rightBarBtnItemAction))
         
         tableView.backgroundColor = UIColor.systemGray
         tableView.dataSource = self
@@ -135,15 +135,15 @@ extension TabViewEditRowExampleViewController: UITableViewDataSource {
         // 前 2 组可移动
         return indexPath.section < 2
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
-        case UITableViewCellEditingStyle.delete:
+        case UITableViewCell.EditingStyle.delete:
             // 删除
             var sectionData: [String] = self.tabDatas[indexPath.section]
             sectionData.remove(at: indexPath.row)
             self.tabDatas[indexPath.section] = sectionData
             
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         case .insert:
             break
         case .none:
@@ -185,15 +185,15 @@ extension TabViewEditRowExampleViewController: UITableViewDelegate {
     
     // MARK: 删除 方式二 (覆盖方式一)
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let add = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "add") { (action: UITableViewRowAction, indexPath: IndexPath) in
+        let add = UITableViewRowAction(style: UITableViewRowAction.Style.normal, title: "add") { (action: UITableViewRowAction, indexPath: IndexPath) in
             print("\(#function) \(indexPath)")
         }
-        let del = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "del") { (action: UITableViewRowAction, indexPath: IndexPath) in
+        let del = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "del") { (action: UITableViewRowAction, indexPath: IndexPath) in
             // 删除
             var sectionData: [String] = self.tabDatas[indexPath.section]
             sectionData.remove(at: indexPath.row)
             self.tabDatas[indexPath.section] = sectionData
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
         return [add, del]
     }

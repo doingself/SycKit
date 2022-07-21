@@ -32,14 +32,13 @@ class HomeViewController: UIViewController {
         //self.title = "原生组件/三方库 Snippets" // 会同时修改 tabbar title
         self.navigationItem.title = "原生组件/三方库 Snippets"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.camera, target: self, action: #selector(rightBarButtonItemAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.camera, target: self, action: #selector(rightBarButtonItemAction))
         
         tableView.backgroundColor = UIColor.systemGray
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 44
-        tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
         self.view.addSubview(tableView)
         

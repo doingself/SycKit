@@ -25,7 +25,7 @@ class TabViewNormalViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.title = "UITableView"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.camera, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.camera, target: nil, action: nil)
         
         tableView.backgroundColor = UIColor.systemGray
         tableView.dataSource = self
