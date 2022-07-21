@@ -42,7 +42,7 @@ class SearchTabViewRxViewController: UIViewController {
         let searchSize = searchBar.sizeThatFits(CGSize.zero)
         searchBar.snp.makeConstraints { (make) in
             if #available(iOS 11.0, *) {
-                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+                make.top.equalTo(self.view.safeAreaLayoutGuide)
                 make.left.right.equalTo(self.view.safeAreaLayoutGuide)
             } else {
                 make.top.equalTo(self.topLayoutGuide.snp.bottom)

@@ -56,7 +56,7 @@ extension RxSwiftReadMe {
             print(event)
         }).disposed(by: disposeBag)
         
-        let _ = Observable<Int>.timer(3, scheduler: MainScheduler.instance)
+        let _ = Observable<Int>.timer(RxTimeInterval.seconds(3), scheduler: MainScheduler.instance)
         let _ = Observable<Int>.empty()
         let _ = Observable<String>.just("A")
         let _ = Observable.from(["A", "B", "C"])

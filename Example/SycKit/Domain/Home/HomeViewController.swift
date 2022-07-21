@@ -19,9 +19,6 @@ class HomeViewController: UIViewController {
         TabViewNormalViewController.self, // 原生 table view
         TabViewEditRowExampleViewController.self, // 原生 table view 编辑
         PresentStyleViewController.self, // 弹出半透明 vc
-        MJRefreshExampleViewController.self, // MJRefresh demo
-        RegisterViewController.self, // Rx 注册页面 (hangge demo)
-        LoginRxViewController.self, // Rx 登录页面 (官方 demo)
         TabViewRxViewController.self, // RxDataSources Rx table view
         SearchTabViewRxViewController.self, // RxDataSources Rx 实时搜索 table view
         

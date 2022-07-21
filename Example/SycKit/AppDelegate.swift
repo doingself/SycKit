@@ -68,6 +68,8 @@ extension AppDelegate {
     /// 主页
     func getRootViewController() -> UIViewController {
         
+        //let vc = ReactDemoViewController(reactor: ReactDemoViewController.Reactor())
+        
         let homeVC = HomeViewController()
         let homeNav = UINavigationController(rootViewController: homeVC)
         homeNav.tabBarItem = UITabBarItem(title: "home", image: UIImage(named: "tabbaritem-me-normal"), tag: 1)
