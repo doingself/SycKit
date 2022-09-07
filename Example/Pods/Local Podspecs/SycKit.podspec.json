@@ -29,13 +29,29 @@
       ]
     },
     {
-      "name": "Foundation",
+      "name": "Extension",
       "source_files": [
-        "SycKit/Classes/SycFoundation/**/*",
-        "SycKit/Classes/SycFoundation/**/*.{swift,h,m,plist}"
+        "SycKit/Classes/SycExtension/**/*",
+        "SycKit/Classes/SycExtension/**/*.{swift,h,m,plist}"
+      ],
+      "frameworks": "UIKit",
+      "dependencies": {
+        "SycKit/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "Util",
+      "source_files": [
+        "SycKit/Classes/SycUtil/**/*",
+        "SycKit/Classes/SycUtil/**/*.{swift,h,m,plist}"
       ],
       "dependencies": {
         "SycKit/Core": [
+
+        ],
+        "SycKit/Extension": [
 
         ]
       }
@@ -55,7 +71,7 @@
       },
       "frameworks": "UIKit",
       "dependencies": {
-        "SycKit/Core": [
+        "SycKit/Extension": [
 
         ]
       }

@@ -24,11 +24,11 @@ class UIColorTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // 靛青    #4B0082    75,0,130
         // 16 进制
-        let color1 = UIColor.yc.getColor(hexString: "#4B0082", alpha: 1)
+        let color1 = UIColor.yc.build(hexString: "#4B0082", alpha: 1)
         // 10 进制
-        let color2 = UIColor.yc.getColor(hexInt: 4915330, alpha: 1)
+        let color2 = UIColor.yc.build(hexInt: 4915330, alpha: 1)
         // rgb
-        let color3 = UIColor.yc.getColor(r: 75, g: 0, b: 130, a: 1)
+        let color3 = UIColor.yc.build(r: 75, g: 0, b: 130, a: 1)
         print("color1 ==== \(color1)")
         print("color2 ==== \(color2)")
         print("color3 ==== \(color3)")

@@ -83,7 +83,7 @@ class BinHexOctTests: XCTestCase {
         print("2:data -> 16:str = \(binaryToHexadecimal)")
         
         // 2:data -> str
-        let utf8Str = hexadecimalToBinary?.yc.convertUTF8Str()
+        let utf8Str = hexadecimalToBinary?.yc.stringValue
         XCTAssertTrue("Aa" == utf8Str, "2:data -> str = \(utf8Str)")
     }
 

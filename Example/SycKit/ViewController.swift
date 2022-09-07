@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         let v = UIView(frame: CGRect(x: 10, y: 100, width: 100, height: 100))
         // 添加渐变色
-        v.yc.addGradientLayer(startColor: UIColor.yc.getColor(hexString: "#0061FF"), endColor: UIColor.red)
+        v.yc.addGradientLayer(startColor: UIColor.yc.build(hexString: "#0061FF")!, endColor: UIColor.red)
         self.view.addSubview(v)
     }
 

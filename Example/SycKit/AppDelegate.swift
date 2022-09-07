@@ -8,6 +8,7 @@
 
 import UIKit
 import SycKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,13 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // 统一设置样式
-        self.setupAppearance()
-        // 主页
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = self.getRootViewController()
-        window?.makeKeyAndVisible()
         
         // 测试 Rx
         RxSwiftReadMe().test()
@@ -35,6 +29,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("isDebug: \(isDebug)")
         print("isSimulator: \(isSimulator)")
         print("isBeginXcode: \(isBeginXcode)")
+        
+        
+        // 主页
+//        // SceneDelegate
+//        if #available(iOS 13.0, *) {
+//            let scene: UIScene? = nil
+//            guard let windowScene: UIWindowScene = (scene as? UIWindowScene) else { return }
+//            let window = UIWindow(windowScene: windowScene)
+//            self.window = window
+//        }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = self.getRootViewController()
+        window?.makeKeyAndVisible()
+        
+        // 统一设置样式
+        self.setupAppearance()
         
         return true
     }
@@ -93,32 +103,96 @@ extension AppDelegate {
         return tabBarController
     }
     
+    /// 第三方注册
+    func registerApp(){
+        //WechatUtil.shared.register()
+    }
+    
+    /// 初始化三方设置
+    func setupVendors(){
+        // 日志
+        //LoggerUtil.setup()
+        // 网络
+        //ReachabilityUtil.setup()
+        // 键盘
+        IQKeyboardManager.shared.enable = true
+    }
+    
     /// 统一设置样式
     func setupAppearance(){
+        
+        // MARK: scrollView
+        if #available(iOS 11.0, *) {
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = .always
+        } else {
+            // viewController.automaticallyAdjustsScrollViewInsets = false
+        }
+        
+        // 暗黑模式 跟随系统 unspecified
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .unspecified
+        }
+        
+        if #available(iOS 15.0, *) {
+            // iOS 15 的 UITableView 新增了一条新属性：sectionHeaderTopPadding， 默认会给每一个 sectionHeader 增加一个高度
+            UITableView.appearance().sectionHeaderTopPadding = 0
+        }
+        
+        // MARK: UITabBar
+        if #available(iOS 13.0, *) {
+            let tabBarAppearance = UITabBarAppearance()
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+            if #available(iOS 15.0, *) {
+                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            }
+        } else {
+            // 背景色
+            UITabBar.appearance().barTintColor = UIColor.systemTeal
+            // 文字图片颜色
+            UITabBar.appearance().tintColor = UIColor.white
+        }
+        
+        
+        // MARK: UIToolbar
+        if #available(iOS 13.0, *) {
+            let toolBarAppearance = UIToolbarAppearance()
+            UIToolbar.appearance().standardAppearance = toolBarAppearance
+            if #available(iOS 15.0, *) {
+                UIToolbar.appearance().scrollEdgeAppearance = toolBarAppearance
+            }
+        }
+        
+        // MARK: UIBarButtonItem
+        // https://developer.apple.com/documentation/technotes/tn3106-customizing-uinavigationbar-appearance
+        //let barButtonItemAppearance = UIBarButtonItemAppearance(style: .plain)
+        //barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UIBarButtonItem.appearance().tintColor = UIColor.systemOrange
         // systemOrange 橙色
         // systemIndigo 靛蓝
         // systemPurple 紫色
         // systemPink 粉红色
         // systemTeal 蓝绿色
         
-        // UINavigationBar
-        // - UINavigationBar().tintColor = ...
-        // - UINavigationBar().standardAppearance = UINavigationBarAppearance()
-        // - UINavigationBar.appearance()...
+        // MARK: UINavigationBar
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground() // 重置背景和阴影颜色
+            UINavigationBar.appearance().standardAppearance = navBarAppearance; // 静止样式
+            UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance; // 滚动样式
+            UINavigationBar.appearance().compactAppearance = navBarAppearance
+            if #available(iOS 15.0, *) {
+                UINavigationBar.appearance().compactScrollEdgeAppearance = navBarAppearance
+            }
+        } else {
+            // nav 背景色
+            UINavigationBar.appearance().barTintColor = UIColor.systemTeal
+            // nav - image 色
+            UINavigationBar.appearance().tintColor = UIColor.black
+            // nav title 样式
+            UINavigationBar.appearance().titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white
+            ]
+        }
         
-        // nav 背景色
-        UINavigationBar.appearance().barTintColor = UIColor.systemTeal
-        // nav - image 色
-        UINavigationBar.appearance().tintColor = UIColor.black
-        // nav title 样式
-        UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
-        
-        //UITabBarController.UITabBar
-        // 背景色
-        UITabBar.appearance().barTintColor = UIColor.systemTeal
-        // 文字图片颜色
-        UITabBar.appearance().tintColor = UIColor.white
     }
 }

@@ -42,21 +42,21 @@ extension PodExampleViewController {
         let v = UIView(frame: CGRect(x: 4, y: statusHeight + navHeight + 4, width: 100, height: 50))
         
         // 初始化颜色
-        let startColor = UIColor.yc.getColor(hexString: "#E1FFFF")
-        let endColor = UIColor.yc.getColor(hexString: "#F08080")
+        guard let startColor = UIColor.yc.build(hexString: "#E1FFFF"),
+              let endColor = UIColor.yc.build(hexString: "#F08080") else { return }
         
         // view 添加 渐变色
         v.yc.addGradientLayer(startColor: startColor, endColor: endColor)
         
         // 圆角
-        v.yc.addCorner(conrners: [UIRectCorner.topLeft, .bottomRight], radius: 10)
+        v.yc.addCorner(corners: [UIRectCorner.topLeft, .bottomRight], radius: 10)
         
         self.view.addSubview(v)
     }
     func imageExample(){
         // 颜色转换图片
-        let color = UIColor.yc.getColor(hexString: "#E1FFFF")
-        let image = UIImage.yc.getImageWithColor(color: color)
+        let color = UIColor.yc.build(hexString: "#E1FFFF")!
+        let image = UIImage.yc.build(color: color)
         
         let statusHeight = CGFloat.yc.statusBarHeight
         let navHeight = CGFloat.yc.navigationBarHeight
@@ -68,7 +68,7 @@ extension PodExampleViewController {
     func printExample(){
         //let date = Date()
         //date.yc.startDay()
-        let bundleName = Bundle.main.yc.getCFBundleName()
-        print("bundleName = \(bundleName)")
+        let bundleIdValue = Bundle.yc.bundleIdValue!
+        print("bundleName = \(bundleIdValue)")
     }
 }

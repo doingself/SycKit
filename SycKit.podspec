@@ -159,12 +159,22 @@ Pod::Spec.new do |spec|
       ]
   end
   
-  spec.subspec 'Foundation' do |ss|
+  spec.subspec 'Extension' do |ss|
       ss.source_files  = [
-      'SycKit/Classes/SycFoundation/**/*',
-      "SycKit/Classes/SycFoundation/**/*.{swift,h,m,plist}"
+      'SycKit/Classes/SycExtension/**/*',
+      "SycKit/Classes/SycExtension/**/*.{swift,h,m,plist}"
+      ]
+      ss.frameworks = 'UIKit'
+      ss.dependency 'SycKit/Core'
+  end
+  
+  spec.subspec 'Util' do |ss|
+      ss.source_files  = [
+      'SycKit/Classes/SycUtil/**/*',
+      "SycKit/Classes/SycUtil/**/*.{swift,h,m,plist}"
       ]
       ss.dependency 'SycKit/Core'
+      ss.dependency 'SycKit/Extension'
   end
   
   spec.subspec 'UI' do |ss|
@@ -183,7 +193,7 @@ Pod::Spec.new do |spec|
       }
       
       ss.frameworks = 'UIKit'
-      ss.dependency 'SycKit/Core'
+      ss.dependency 'SycKit/Extension'
       #ss.dependency 'AFNetworking', '~> 2.3'
   end
   

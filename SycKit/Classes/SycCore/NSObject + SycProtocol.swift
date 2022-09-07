@@ -20,5 +20,8 @@ extension String: SycProtocol { }
 // MARK: Int 继承 SycProtocol 协议后 可以使用 `yc`
 extension Int: SycProtocol { }
 
+// MARK: CGFloat 继承 SycProtocol 协议后 可以使用 `yc`
+extension CGFloat: SycProtocol { }
+
 // MARK: Data 继承 SycProtocol 协议后 可以使用 `yc`
 extension Data: SycProtocol { }

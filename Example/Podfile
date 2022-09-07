@@ -3,35 +3,39 @@ use_frameworks!
 
 target 'SycKit_Example' do
   #pod 'SycKit', :path => '../'
-  pod 'SycKit/Foundation', :path => '../' # core + foundation
   pod 'SycKit/UI', :path => '../' # core + ui
 
   
   # Rx 系列
-  pod 'RxSwift', '6.5.0' # RxSwift：Rx标准API的Swift实现，不包括任何iOS相关的内容
-  pod 'RxCocoa', '6.5.0' # RxCocoa：基于RxSwift，给iOS的UI控件扩展了很多Rx特性
-  pod 'RxDataSources', '5.0' # Table and Collection view data sources
-  pod 'Moya/RxSwift', '15.0' # 基于 Alamofire 的网络抽象层
-  pod 'NSObject+Rx', '5.2.2' # NSObject 上方便的 RxSwift 扩展，包括 rx.disposeBag
-  pod 'ReactorKit', '3.2.0' # 基于 RxSwift 的状态管理框架，响应式编程, 单向数据流  view -> action -> reactor -> state -> view
-  pod 'RxViewController', '2.0.0' # rx.viewWillAppear
-  # RxOptional # 按需导入
+  pod 'RxSwift', '6.5.0' # RxSwift：Rx标准API的Swift实现，不包括任何iOS相关的内容 https://github.com/ReactiveX/RxSwift
+  pod 'RxCocoa', '6.5.0' # RxCocoa：基于RxSwift，给iOS的UI控件扩展了很多Rx特性 https://github.com/ReactiveX/RxSwift
+  pod 'RxDataSources', '5.0' # Table and Collection view data sources https://github.com/RxSwiftCommunity/RxDataSources
+  pod 'Moya/RxSwift', '15.0' # 基于 Alamofire 的网络抽象层 https://github.com/Moya/Moya
+  pod 'NSObject+Rx', '5.2.2' # NSObject 上方便的 RxSwift 扩展，包括 rx.disposeBag  https://github.com/RxSwiftCommunity/NSObject-Rx
+  pod 'RxViewController', '2.0.0' # rx.viewWillAppear https://github.com/devxoul/RxViewController
+  # RxOptional # optionals and "Occupiable" types
+  pod 'ReactorKit', '3.2.0' # 基于 RxSwift 的状态管理框架，响应式编程, 单向数据流  view -> action -> reactor -> state -> view  https://github.com/ReactorKit/ReactorKit
   
   
   # UI 系列
-  pod 'SnapKit', '5.6.0' # 布局
-  pod 'MBProgressHUD', '1.2.0' # hud 指示器
-  pod 'IQKeyboardManagerSwift', '6.5.10' # 键盘管理, 防止键盘向上滑动覆盖问题
-  pod 'DZNEmptyDataSet', '1.8.1' # Table and Collection view 空数据设置
-  pod 'MJRefresh', '3.7.5' # 下拉刷新
-  pod 'Reusable', '4.1.2' # cell 注册
-  pod 'JXSegmentedView', '1.3.0' # segment view
+  pod 'SnapKit', '5.6.0' # 布局 https://github.com/SnapKit/SnapKit
+  pod 'MBProgressHUD', '1.2.0' # hud 指示器 https://github.com/jdg/MBProgressHUD
+  pod 'IQKeyboardManagerSwift', '6.5.10' # 键盘管理, 防止键盘向上滑动覆盖问题 https://github.com/hackiftekhar/IQKeyboardManager
+  pod 'DZNEmptyDataSet', '1.8.1' # Table and Collection view 空数据设置 https://github.com/dzenbot/DZNEmptyDataSet
+  pod 'MJRefresh', '3.7.5' # 下拉刷新 https://github.com/CoderMJLee/MJRefresh
+  pod 'Reusable', '4.1.2' # cell 注册 https://github.com/AliSoftware/Reusable
+  pod 'JXSegmentedView', '1.3.0' # segment view https://github.com/pujiaxin33/JXSegmentedView
   
   # Data
-  #pod 'KeychainSwift', '20.0.0' # Keychain 
-  pod 'CleanJSON', '1.0.9' # CleanJSONDecoder 继承自 JSONDecoder, 以解决 JSONDecoder 各种解析失败的问题
-  #pod 'CryptoSwift' # 使用 Swift 编写的加密工具包，支持多种加密算法，如：MD5、SHA1、AES-128 等等
-
+  #pod 'KeychainSwift', '20.0.0' # Keychain https://github.com/evgenyneu/keychain-swift
+  pod 'CleanJSON', '1.0.9' # CleanJSONDecoder 继承自 JSONDecoder, 以解决 JSONDecoder 各种解析失败的问题 https://github.com/Pircate/CleanJSON
+  #pod 'CryptoSwift', '~> 1.4.1' # 使用 Swift 编写的加密工具包，支持多种加密算法，如：MD5、SHA1、AES-128 等等 https://github.com/krzyzanowskim/CryptoSwift
+  pod 'CocoaLumberjack/Swift', '3.7.4' # 日志库 https://github.com/CocoaLumberjack/CocoaLumberjack
+  
+  
+  #Vendors
+  #pod 'AlipaySDK-iOS', '15.8.10' # 支付宝 支付
+  #pod 'WechatOpenSDK', '1.8.7.1' # 微信登录 + 支付
   
   
   target 'SycKit_Tests' do

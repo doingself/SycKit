@@ -44,7 +44,7 @@ extension MoyaProvider {
             if let str = obj as? String {
                 return Single.just(str)
             } else if let num = obj as? Int {
-                return Single.just(num.stringValue)
+                return Single.just(num.yc.stringValue)
             } else {
                 return Single.just("")
             }
